@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/redondo"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="5dp">
+        <!--android:focusableInTouchMode="true"-->
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="282dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/transparent"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:hint="Buscar..."
+            android:textColor="@color/gris"
+            android:theme="@style/CampoTextoBlanco" />
+
+        <ImageButton
+            android:id="@+id/boton_buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blanco"
+            android:onClick="onMapSearch"
+            android:src="@drawable/ic_lupa" />
+
+        <ImageButton
+            android:id="@+id/boton_voz"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blanco"
+            android:onClick="reconocimientoVoz"
+            android:src="@drawable/ic_voz" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="125dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="535dp"
+        android:background="@drawable/redondo1"
+        android:elevation="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/boton_refrescar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/redondo1"
+            android:onClick="Refrescar"
+            android:src="@drawable/ic_refrescar" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1"
+            android:onClick="Refrescar"
+            android:text="Actualizar"
+            android:textColor="@color/blanco"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
